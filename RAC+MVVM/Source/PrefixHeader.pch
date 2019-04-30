@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  RAC+MVVM
+//
+//  Created by 曹鹏飞 on 2019/4/29.
+//  Copyright © 2019 jjs. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+# ifdef __OBJC__
+
+#import <MJExtension.h>
+#import <AFNetworking.h>
+#import <Masonry.h>
+#import <MBProgressHUD.h>
+#import <UIImageView+WebCache.h>
+#import <ReactiveObjC.h>
+#import <ReactiveObjC/RACReturnSignal.h>
+
+// 自定义输入日志 Log
+#ifdef  DEBUG // 如果当前是开发 调试阶段可以用ZYLog输入
+#define ZYLog(...) NSLog(__VA_ARGS__)
+#else // 发布后就不能输入了
+#define ZYLog(...)
+#endif
+#endif
+#endif /* PrefixHeader_pch */
